@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Registro de Productos</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de Registro</h2>
+            <form id="form-producto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Otros">Otros</option>
+                </select>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" step="0.01">
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock">
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Listado de Productos</h2>
+
+            <label for="buscar">Buscar por nombre:</label>
+            <input type="text" id="buscar">
+
+            <p>Total de productos registrados: <span id="total-productos">0</span></p>
+            <p>Valor total del inventario: S/. <span id="valor-total">0.00</span></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tienda - Registro de Productos</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
